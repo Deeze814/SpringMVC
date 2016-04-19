@@ -12,3 +12,16 @@
 	(5) Create a controllers package and a SimpleController.java
 	(6) Create a views folder under the WEB-INF folder and create hello.jsp
 	(7) For tomcat, you will need to right click the project and go to Properties --> Project Facets and check dynamic web project in order to get it to show for tomcat
+	(8) To access the project you will need to go to Http://localhost:8080/SpringMvc/hello.htm 
+	
+	
+	
+--Creating repo
+	(1) Issue git commands from git bash:
+		--git remote add origin git@github.com:Deeze814/SpringMVC.git
+		--git push -u origin master
+	(2) If you get an error saying it couldnt push, make sure your account is added as a collaborator in the github repo
+	(3) If it still fails, open the project .git/config and make sure the url is correct.
+		--For SpringMVC I had to make the following change
+			--[remote "origin"]
+				url = git@github.com:Deeze814.SpringMVC.git --> url = git@github.com:Deeze814/SpringMVC.git
