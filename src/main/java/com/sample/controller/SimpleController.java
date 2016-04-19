@@ -11,6 +11,6 @@ public class SimpleController {
 	public ModelAndView sayHello(){
 		//message is model alias, Hey there is the value, hello is the view
 		System.out.println("Hello method hit");
-		return new ModelAndView( "hello", "message", "Hey there");
+		return new ModelAndView( "hello", "message", "Hello from the Annotation Based Configuration");
 	}
 }

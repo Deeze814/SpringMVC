@@ -13,7 +13,9 @@
 	(6) Create a views folder under the WEB-INF folder and create hello.jsp
 	(7) For tomcat, you will need to right click the project and go to Properties --> Project Facets and check dynamic web project in order to get it to show for tomcat
 	(8) To access the project you will need to go to Http://localhost:8080/SpringMvc/hello.htm 
-	
+
+--Annotation Based config
+	(1) Deleted the WEB-INF/springmvc-servlet.xml and replaced it with a new config file (com.sample.config.AppConfig) and configured it in WEB-INF/web.xml	
 	
 	
 --Creating repo
