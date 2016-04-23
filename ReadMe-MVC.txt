@@ -27,3 +27,8 @@
 		--For SpringMVC I had to make the following change
 			--[remote "origin"]
 				url = git@github.com:Deeze814.SpringMVC.git --> url = git@github.com:Deeze814/SpringMVC.git
+				
+--Eclipse settings
+	(1) To get the normal Project Explorer, go to Window --> Open Perspective --> JavaEE
+	(2) Switched form Luna to Mars and downloaded the JavaEE edition from:
+		http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2 
