@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div>
-		<form:form modelAttribute="user" action="form_post.htm">
+		<form:form modelAttribute="user" action="result.htm">
 			<div>
 				<div><form:label path="firstName">First Name</form:label></div>
 				<div><form:input path="firstName" /></div>
@@ -30,13 +30,13 @@
 				<div><form:label path="birthDate">Birth Date</form:label></div>
 				<div><form:input path="birthDate"/></div>
 			</div>
-			<div>
+<%-- 			<div>
 				<div><form:label path="gender">Gender</form:label></div>
 				<div><form:radiobuttons path="gender" items="${genders}"/></div>
-			</div>
+			</div> --%>
 			<div>
 				<div><form:label path="country">Country</form:label></div>
-				<div><form:select path="contry" items="${countries}"></form:select></div>
+				<div><form:select path="country" items="${countries}"></form:select></div>
 			</div>
 			<div>
 				<div><form:label path="smoking">Smoking?</form:label></div>

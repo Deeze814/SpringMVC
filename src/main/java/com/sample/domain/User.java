@@ -1,4 +1,4 @@
-package com.sample.bean;
+package com.sample.domain;
 
 import java.io.Serializable;
 
