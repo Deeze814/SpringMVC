@@ -6,40 +6,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registration Results</title>
 <!-- 	<script type="text/javascript" src="./GlobalJS/global_js.js"></script> -->
+<style type="text/css">
+	div > span{padding-right: 5%;}
+</style>
 </head>
 <body>
 	<div>
 		<div>
-			<div>First Name</div>
-			<div>${user.firstName}</div>
+			<span>First Name:</span>
+			<span>${user.firstName}</span>
 		</div>
 		<div>
-			<div>Last Name</div>
-			<div>${user.lastName}</div>
+			<span>Last Name:</span>
+			<span>${user.lastName}</span>
 		</div>
 		<div>
-			<div>PassWord</div>
-			<div>${user.passWord}</div>
+			<span>PassWord:</span>
+			<span>${user.passWord}</span>
 		</div>
 		<div>
-			<div>Personal Details</div>
-			<div>${user.details}</div>
+			<span>Personal Details:</span>
+			<span>${user.detail}</span>
 		</div>
 		<div>
-			<div>Birth Date</div>
-			<div>${user.birthDate}</div>
+			<span>Birth Date:</span>
+			<span>${user.birthDate}</span>
 		</div>
 		<div>
-			<div>Gender</div>
-			<div>${user.gender}</div>
+			<span>Gender:</span>
+			<span>${user.gender}</span>
 		</div>
 		<div>
-			<div>Country</div>
-			<div>${user.country}</div>
+			<span>Country:</span>
+			<span>${user.country}</span>
 		</div>
 		<div>
-			<div>Smoking?</div>
-			<div>${user.smoking}</div>
+			<span>Smoking?</span>
+			<span>${user.smoking}</span>
 		</div>
 	</div>
 </body>

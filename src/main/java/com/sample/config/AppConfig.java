@@ -3,6 +3,7 @@ package com.sample.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.sample.dao.UserDao;
@@ -11,6 +12,7 @@ import com.sample.service.UserService;
 import com.sample.service.UserServiceImpl;
 
 @Configuration
+@EnableWebMvc //This annotation allows for Validation via annotated fields on domain objects
 @ComponentScan(basePackages = {"com.sample.controller"})
 public class AppConfig {
 

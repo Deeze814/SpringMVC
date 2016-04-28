@@ -1,19 +1,29 @@
 package com.sample.domain;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 
-public class User implements Serializable {
+import javax.validation.constraints.Pattern;
 
-	private static final long serialVersionUID = 1L;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+
+public class User {
+
+	//private static final long serialVersionUID = 1L;
 	
+	@Length(min=3,max=20, message="Please provide a first name.")
 	private String firstName;
+	@Length(min=3,max=20, message="Please provide a last name")
 	private String lastName;
+	@Pattern(regexp = "^[a-zA-Z]\\w{3,14}$", message="Passwords must be between 3 and 14 characters.")
 	private String passWord;
 	private String detail;
 	private String birthDate;
-	private char gender;
+	private String gender;
 	private String country;
 	private boolean smoking;
+	@Email
+	private String email;
 	
 	public String getFirstName() {
 		return firstName;
@@ -45,10 +55,10 @@ public class User implements Serializable {
 	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public String getCountry() {
@@ -62,6 +72,12 @@ public class User implements Serializable {
 	}
 	public void setSmoking(boolean smoking) {
 		this.smoking = smoking;
+	}	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

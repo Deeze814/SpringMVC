@@ -16,6 +16,10 @@
 
 --Annotation Based config
 	(1) Deleted the WEB-INF/springmvc-servlet.xml and replaced it with a new config file (com.sample.config.AppConfig) and configured it in WEB-INF/web.xml	
+
+--Turn on bean validation
+	(1) Get the Hibernate Validator dependency listed in this project's pom file.
+	(2) If you are using Java based configuration, be sure to add the @EnableWebMvc annotation.
 	
 	
 --Creating repo
