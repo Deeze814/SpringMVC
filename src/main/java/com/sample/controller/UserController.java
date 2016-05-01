@@ -33,7 +33,7 @@ public class UserController {
 	}
 	
 	//Add binding result to ensure that we validate all of the User fields based on any
-	//field annotation declared in the com.sample.bean.User class.
+	//field annotation declared in the com.sample.domain.User class.
 	@RequestMapping(value="/result", method=RequestMethod.POST)
 	public ModelAndView postRegistrationList(@Valid User user, BindingResult result){
 		ModelAndView mav = new ModelAndView(RESULT, "user", user);

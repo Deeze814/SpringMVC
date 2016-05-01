@@ -20,6 +20,11 @@
 --Turn on bean validation
 	(1) Get the Hibernate Validator dependency listed in this project's pom file.
 	(2) If you are using Java based configuration, be sure to add the @EnableWebMvc annotation.
+	(3) For message bundle based error messages:
+		(a) Make your config class (AppConfig) extend WebMvcConfigurerAdapter
+		(b) Define a new method in the config class that will override the newly extended WebMvcConfigurerAdapter.getValidator() 
+		(c) Get a reference to the validator that references the new message.properties file using the two Spring Framework classes.
+		(d) Create a new .properties file in the src/main/resources folder.
 	
 	
 --Creating repo

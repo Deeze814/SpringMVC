@@ -11,11 +11,11 @@ public class User {
 
 	//private static final long serialVersionUID = 1L;
 	
-	@Length(min=3,max=20, message="Please provide a first name.")
+	@Length(min=3,max=20, message="{user.firstname.error}")
 	private String firstName;
-	@Length(min=3,max=20, message="Please provide a last name")
+	@Length(min=3,max=20, message="{user.lastname.error}")
 	private String lastName;
-	@Pattern(regexp = "^[a-zA-Z]\\w{3,14}$", message="Passwords must be between 3 and 14 characters.")
+	@Pattern(regexp = "^[a-zA-Z]\\w{3,14}$", message="{user.password.error}")
 	private String passWord;
 	private String detail;
 	private String birthDate;
