@@ -3,6 +3,7 @@ package com.sample.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -17,6 +18,7 @@ import com.sample.service.UserServiceImpl;
 
 @Configuration
 @EnableWebMvc //This annotation allows for Validation via annotated fields on domain objects
+@Import({ServicesConfig.class, DaoConfig.class})
 @ComponentScan(basePackages = {"com.sample.controller"})
 public class AppConfig extends WebMvcConfigurerAdapter{
 
@@ -41,16 +43,4 @@ public class AppConfig extends WebMvcConfigurerAdapter{
 			
 			return validator;
 		}
-		
-		//Provides the user service 
-		@Bean
-		public UserService userService(){
-			return new UserServiceImpl();
-		}
-		
-		//Provides the user data access object
-		@Bean
-		public UserDao userDao(){
-			return new UserDaoInMemoryImpl();
-		}		
 }
