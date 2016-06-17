@@ -25,3 +25,19 @@
 		--For SpringMVC I had to make the following change
 			--[remote "origin"]
 				url = git@github.com:Deeze814.SpringMVC.git --> url = git@github.com:Deeze814/SpringMVC.git
+
+
+--Importing project from Git into a new workspace
+	(1) Create a new workspace folder (i.e. C:\Deeze814\Git\MVC)
+	(2) Using Git bash, do a git init and then clone the repo into this new folder (\MVC)
+	(3) Open Eclipse and point the workspace at the ..\Git\MVC folder
+	(4) Go to File --> Import --> Existing Maven Projects, then path down to the Spring MVC project and import it
+	(5) Right click the procject in the project explorer and go to Properties --> Project Facets
+	(6) Click Java, JavaScript, and Dynamic Web Module
+		--After clicking Dynamic Web Module, click the light blue text at the bottom that says 'Further Configuration Available'
+		--Delete the 'WebContent' entry and replace it with the path that maven created the web.xml under 
+			-- src\main\webapp
+	(7) Now we need to tell Eclipse that our JARs are not located in the WEB-INF\lib folder but are on the classpath already
+		--Right click the project in the Project Explorer and select Properties -> Deployment Assembly
+		--Click 'Add' --> Java Build Path Entries --> Maven Dependencies.
+	(8) Clean, build and start tomcat. You should see it pick up on the WebApplicationContext for namespace 'springmvc-servlet'
