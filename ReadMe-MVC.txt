@@ -13,7 +13,18 @@
 	(6) Create a views folder under the WEB-INF folder and create hello.jsp
 	(7) For tomcat, you will need to right click the project and go to Properties --> Project Facets and check dynamic web project in order to get it to show for tomcat
 	(8) To access the project you will need to go to Http://localhost:8080/SpringMvc/hello.htm 
-	
+
+--Annotation Based config
+	(1) Deleted the WEB-INF/springmvc-servlet.xml and replaced it with a new config file (com.sample.config.AppConfig) and configured it in WEB-INF/web.xml	
+
+--Turn on bean validation
+	(1) Get the Hibernate Validator dependency listed in this project's pom file.
+	(2) If you are using Java based configuration, be sure to add the @EnableWebMvc annotation.
+	(3) For message bundle based error messages:
+		(a) Make your config class (AppConfig) extend WebMvcConfigurerAdapter
+		(b) Define a new method in the config class that will override the newly extended WebMvcConfigurerAdapter.getValidator() 
+		(c) Get a reference to the validator that references the new message.properties file using the two Spring Framework classes.
+		(d) Create a new .properties file in the src/main/resources folder.
 	
 	
 --Creating repo
@@ -41,3 +52,8 @@
 		--Right click the project in the Project Explorer and select Properties -> Deployment Assembly
 		--Click 'Add' --> Java Build Path Entries --> Maven Dependencies.
 	(8) Clean, build and start tomcat. You should see it pick up on the WebApplicationContext for namespace 'springmvc-servlet'
+				
+--Eclipse settings
+	(1) To get the normal Project Explorer, go to Window --> Open Perspective --> JavaEE
+	(2) Switched form Luna to Mars and downloaded the JavaEE edition from:
+		http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2 
