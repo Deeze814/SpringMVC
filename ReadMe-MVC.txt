@@ -57,3 +57,20 @@
 	(1) To get the normal Project Explorer, go to Window --> Open Perspective --> JavaEE
 	(2) Switched form Luna to Mars and downloaded the JavaEE edition from:
 		http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars2 
+
+--Merging Git branches
+	(1) Used sourcetree, downloaded Meld (http://meldmerge.org/)
+	(2) In sourcetree, go to Tools --> Options --> Diff
+	(3) Under 'External Diff Tool' and 'Merge Tool' select Custom
+	(4) For 'Diff Command' enter the path to the meld.exe (C:\Program Files (x86)\Meld\Meld.exe)
+	(5) For 'Arguments' enter $LOCAL $MERGED $REMOTE
+	   --Since Meld does 3 way diff model, this will put:
+	   		-Local changes on the left
+	   		-Remote branch version on the right
+	   		-Merged version in the middle
+	(6) In sourcetree, check out the branch you want the merge to go INTO (master in my case)
+	(7) Right click the branch you want to merge into your currently checkout out branch and select 'Merge XXX into XXX'
+	(8) When you get the prompt saying conflicts occurred, go to the 'File Status' tab
+	(9) Right click a conflicted file and choose, 'Launch External Merge Tool'
+	(10) Resolve the conflict in Meld and save the file, then close Meld.
+	(11) Once you have resolved and saved all conflicted files, do a git commit/git push 
