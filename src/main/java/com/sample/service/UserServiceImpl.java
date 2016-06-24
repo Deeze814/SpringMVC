@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sample.dao.UserDao;
+import com.sample.domain.User;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -17,9 +18,12 @@ public class UserServiceImpl implements UserService {
 		this.userDao = userDao;
 	}
 	
-	@Override
 	public List<String> getCountries() {
 		return userDao.getCountries();
+	}
+	
+	public List<User> getAllUsers() {
+		return userDao.findAll();
 	}
 
 }

@@ -39,4 +39,10 @@ public class UserDaoInMemoryImpl implements UserDao {
 		return null;
 	}
 
+	@Override
+	public List<User> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

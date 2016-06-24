@@ -23,6 +23,8 @@ public class UserController {
 	//Views
 	private final String LIST = "form_list";
 	private final String RESULT = "form_result";
+	private final String HOME = "home";
+	private final String ALL_USERS = "list_users";
 	
 	@RequestMapping(value="/list")
 	public ModelAndView showRegistrationList(){
@@ -44,6 +46,22 @@ public class UserController {
 			mav.addObject("countries", service.getCountries());
 			mav.addObject("genders", Enums.Genders.values());
 		}
+		
+		return mav;
+		
+	}
+	
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public ModelAndView showHomePage(){
+		return new ModelAndView(HOME);
+		
+	}
+	
+	@RequestMapping(value="getAllUsers", method=RequestMethod.GET)
+	public ModelAndView getAllUsers(){
+		ModelAndView mav = new ModelAndView(ALL_USERS);
+		
+		service.getAllUsers();
 		
 		return mav;
 		
